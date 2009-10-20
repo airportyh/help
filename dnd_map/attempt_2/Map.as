@@ -21,11 +21,6 @@ package{
             addChild(overlayPane)
             setChildIndex(overlayPane, 1)
             setChildIndex(map, 0)
-            setupMapEventListeners()
-        }
-        
-        function setupMapEventListeners(){
-            addEventListener(MouseEvent.MOUSE_MOVE, onMapMouseMove)
         }
         
         function mapCoordinates(e:MouseEvent):Point{
@@ -83,7 +78,7 @@ package{
         // =========== Drag & Drap Machinery =============
         
         function onPolylineMouseUp(e:MapMouseEvent):void{
-            trace('polyline moused up') // this never happens if you drop a marker onto a polyline
+            trace('polyline moused up') // this works now
         }
         
         function onPolylineRollOver(e:MapMouseEvent):void{
